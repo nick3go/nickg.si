@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nick Gatnik — my corner of the world wide web." />
+  <title>Nick Gatnik — nickg.si</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="grid"></div>
+
+  <header class="site-header wrap">
+    <a class="logo" href="#top" aria-label="Home" data-logo>
+      <span>NG</span><span class="cursor">_</span>
+    </a>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#things">things</a>
+      <a href="#now">now</a>
+      <button class="terminal-button" type="button" data-terminal-open>&gt;_</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-kicker">nickg.si / home</div>
+      <h1>Nick Gatnik</h1>
+      <p class="hero-line">my corner of the <span class="accent">world wide web</span>.</p>
+      <p class="hero-copy">
+        Student, maker, firefighter, scout leader, and chronic starter of “small” side projects.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#about">enter ↓</a>
+        <a class="button ghost" href="https://github.com/nick3go" target="_blank" rel="noreferrer">github ↗</a>
+      </div>
+      <div class="status-line">
+        <span class="status-dot"></span>
+        <span>behind a comp or in the woods</span>
+      </div>
+    </section>
+
+    <section id="about" class="section wrap split">
+      <div class="section-label">01 / about</div>
+      <div class="section-content large-copy">
+        <p>I’m a student from Slovenia with a lot of different interests. I enjoy learning, creating things, spending time outdoors, and getting involved in projects and communities that matter to me.</p>
+        <p>Scouting and firefighting are a big part of my life, while technology is one of the many areas I like exploring along the way.</p>
+      </div>
+    </section>
+
+    <section id="things" class="section wrap split">
+      <div class="section-label">02 / things</div>
+      <div class="section-content">
+        <div class="mini-grid">
+          <article class="mini-card">
+            <span class="mini-index">A</span>
+            <h3>Making</h3>
+            <p>I like turning ideas into something real — sometimes digital, sometimes physical, and often just to see where they lead.</p>
+          </article>
+          <article class="mini-card">
+            <span class="mini-index">B</span>
+            <h3>Scouting</h3>
+            <p>Leading, planning, teaching, being outdoors and helping create experiences worth remembering.</p>
+          </article>
+          <article class="mini-card">
+            <span class="mini-index">C</span>
+            <h3>Firefighting</h3>
+            <p>Training, learning, putting in the time and showing up.</p>
+          </article>
+        </div>
+
+        <p class="side-quests-intro">I build things, sometimes they actually work. <br> You can check them out here: </p>
+
+        <div class="tiny-projects">
+          <div class="tiny-projects-head">
+            <span>selected side quests</span>
+            <span class="muted">personal / experimental</span>
+          </div>
+          <a class="project-row" href="#" onclick="return false;">
+            <span>Live LPP tracker on ESP32 display</span><span>embedded / api</span>
+          </a>
+          <a class="project-row" href="#" onclick="return false;">
+            <span>Database of patrol meeting plans for scout leaders</span><span>web / scouting</span>
+          </a>
+          <a class="project-row" href="#" onclick="return false;">
+            <span>more things...</span><span>classified :)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="now" class="section wrap split">
+      <div class="section-label">03 / now</div>
+      <div class="section-content now-card">
+        <div>
+          <span class="mono muted">currently</span>
+          <h2>building, learning, breaking, fixing.</h2>
+        </div>
+        <ul>
+          <li><span>→</span> web apps</li>
+          <li><span>→</span> microcontrollers</li>
+          <li><span>→</span> firefighting</li>
+          <li><span>→</span> scouting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wrap split">
+      <div class="section-label">04 / elsewhere</div>
+      <div class="section-content link-stack">
+        <a href="https://github.com/nick3go" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a>
+        <a href="https://www.instagram.com/nick3go/" target="_blank" rel="noreferrer"><span>Instagram</span><span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="year"></span> Nick Gatnik</span>
+    <span>built with HTML, CSS, JS & questionable curiosity</span>
+  </footer>
+
+  <div class="terminal" data-terminal aria-hidden="true">
+    <div class="terminal-window">
+      <div class="terminal-topbar">
+        <span>nick@nickg.si:~</span>
+        <button type="button" data-terminal-close>×</button>
+      </div>
+      <div class="terminal-body" data-terminal-body>
+        <p><span class="prompt">nick@nickg:~$</span> hello</p>
+        <p>hey 👋 try <span class="cmd">help</span></p>
+      </div>
+      <form class="terminal-input-row" data-terminal-form>
+        <span class="prompt">nick@nickg:~$</span>
+        <input data-terminal-input autocomplete="off" spellcheck="false" aria-label="Terminal command" />
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" data-toast></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
