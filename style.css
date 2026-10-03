@@ -130,8 +130,17 @@ h1 {
 .tiny-projects-head, .project-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; }
 .tiny-projects-head { padding: 18px 0; font-size: .72rem; color: #7b8089; }
 .project-row { padding: 18px 0; border-top: 1px solid rgba(255,255,255,.045); font-size: .94rem; }
-.project-row span:last-child { color: #747983; font-family: 'JetBrains Mono', monospace; font-size: .76rem; }
-.project-row:hover span:first-child { color: var(--accent-bright); }
+.project-row > span:nth-child(2) { color: #747983; font-family: 'JetBrains Mono', monospace; font-size: .76rem; }
+.project-row:hover > span:first-child,
+.project-row:hover > .project-main { color: var(--accent-bright); }
+.project-row-live { grid-template-columns: 1fr auto auto; align-items: center; }
+.try-link {
+  color: var(--accent-bright);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .76rem;
+  white-space: nowrap;
+}
+.try-link:hover { color: var(--text); }
 .muted { color: var(--muted); }
 
 .now-card { border: 1px solid var(--line); border-radius: 16px; padding: 34px; background: rgba(255,255,255,.015); display: grid; grid-template-columns: 1.3fr .7fr; gap: 30px; }
