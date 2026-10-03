@@ -133,7 +133,13 @@ h1 {
 .project-row > span:nth-child(2) { color: #747983; font-family: 'JetBrains Mono', monospace; font-size: .76rem; }
 .project-row:hover > span:first-child,
 .project-row:hover > .project-main { color: var(--accent-bright); }
-.project-row-live { grid-template-columns: 1fr auto auto; align-items: center; }
+.project-row-live { grid-template-columns: 1fr auto; align-items: center; }
+.project-title-group {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
 .try-link {
   color: var(--accent-bright);
   font-family: 'JetBrains Mono', monospace;
@@ -188,5 +194,6 @@ h1 {
   .mini-card { min-height: 170px; }
   .mini-card h3 { margin-top: 40px; }
   .now-card { grid-template-columns: 1fr; }
+  .project-title-group { flex-wrap: wrap; gap: 6px 12px; }
   .footer { flex-direction: column; gap: 10px; }
 }
